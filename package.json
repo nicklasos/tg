@@ -1,0 +1,27 @@
+{
+  "type": "module",
+  "name": "tg",
+  "version": "1.0.0",
+  "description": "Telegram channels",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/nicklasos/tg.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicklasos/tg/issues"
+  },
+  "homepage": "https://github.com/nicklasos/tg#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "input": "^1.0.1",
+    "knex": "^2.5.0",
+    "mysql": "^2.18.1",
+    "telegram": "^2.17.10"
+  }
+}
