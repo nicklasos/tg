@@ -6,3 +6,6 @@ ttg:
 
 save:
 	node commands/save.js
+
+start-save:
+	pm2 start commands/save.js
