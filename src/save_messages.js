@@ -17,7 +17,7 @@ export async function saveMessages(handler) {
     });
 
     try {
-        await client.start();
+        await client.start({});
     } catch (e) {
         if (e.message.includes('BotToken is required')) {
             await client.start({
