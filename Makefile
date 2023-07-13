@@ -9,3 +9,6 @@ save:
 
 start-save:
 	pm2 start commands/save.js
+
+restart-save:
+	pm2 restart save
