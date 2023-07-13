@@ -7,7 +7,5 @@ await saveMessages(async event => {
     if (message.hasOwnProperty('senderId')) {
         console.log(message.senderId.toString(), message.text);
         await saveMessage(message.senderId.toString(), message.text);
-    } else {
-        console.log('Info: no senderId', message);
     }
 });
