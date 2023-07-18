@@ -10,5 +10,8 @@ save:
 start-save:
 	pm2 start commands/save.js
 
+stop-save:
+	pm2 stop save
+
 restart-save:
 	pm2 restart save

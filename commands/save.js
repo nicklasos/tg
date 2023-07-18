@@ -14,7 +14,7 @@ await saveMessages(async event => {
     // });
 
     if (message.hasOwnProperty('peerId') && message.peerId.hasOwnProperty('channelId')) {
-        console.log(message.peerId.channelId, message.text);
-        await saveMessage(message.peerId.channelId, message.text);
+        console.log(message.peerId.channelId.toString(), message.text);
+        await saveMessage(message.peerId.channelId.toString(), message.text);
     }
 });
