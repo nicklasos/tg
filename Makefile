@@ -15,3 +15,6 @@ stop-save:
 
 restart-save:
 	pm2 restart save
+
+generate-post:
+	node commands/generate_post.js
