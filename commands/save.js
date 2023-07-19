@@ -13,7 +13,11 @@ await saveMessages(async event => {
     //     if (err) console.error(err);
     // });
 
-    if (message.hasOwnProperty('peerId') && message.peerId.hasOwnProperty('channelId')) {
+    if (
+        message.hasOwnProperty('peerId') &&
+        message.peerId.hasOwnProperty('channelId') &&
+        message.text.length
+    ) {
         console.log(message.peerId.channelId.toString(), message.text);
         await saveMessage(message.peerId.channelId.toString(), message.text);
     }
