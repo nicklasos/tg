@@ -8,5 +8,7 @@ export default {
         kriptopox: '1796197484',
         AleksDoo: '1254762668',
         TumoBog_Crypto: '1738536447',
+        Bitcoin_UA: '1338756737',
+        ukr_crypto: '1415396117',
     },
 };
