@@ -50,9 +50,12 @@ export async function generatePost() {
 
     let summaries = [];
 
-    let allMessages = (await getMessagesByChannelIds(ids)).map(
+    let allMessages = (await getMessagesByChannelIds(ids, new Date('2023-07-19 11:00:00'))).map(
         msg => msg.message
     );
+
+    console.log(allMessages);
+    process.exit();
 
     let chunksMessages = arrayChunk(allMessages, 5);
 

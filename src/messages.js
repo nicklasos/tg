@@ -9,8 +9,11 @@ export async function saveMessage(chatId, message) {
 
 /**
  * @param channelIds
+ * @param date
  * @returns {Promise<array>}
  */
-export async function getMessagesByChannelIds(channelIds) {
-    return db('messages').whereIn('chat_id', channelIds);
+export async function getMessagesByChannelIds(channelIds, date) {
+    return db('messages')
+        .whereIn('chat_id', channelIds)
+        .where('created_at', '>=', date);
 }
