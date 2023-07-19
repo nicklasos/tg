@@ -1,3 +1,11 @@
-import config from "./../config/config.js";
+import {generatePost} from "../src/openai/generate_post.js";
 
-console.log(config);
+import db from "./../src/db.js";
+
+try {
+    await generatePost();
+} catch (e) {
+    console.error(e);
+} finally {
+    await db.destroy();
+}

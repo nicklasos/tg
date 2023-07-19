@@ -6,3 +6,11 @@ export async function saveMessage(chatId, message) {
         message,
     });
 }
+
+/**
+ * @param channelIds
+ * @returns {Promise<array>}
+ */
+export async function getMessagesByChannelIds(channelIds) {
+    return db('messages').whereIn('chat_id', channelIds);
+}
